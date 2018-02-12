@@ -1,0 +1,144 @@
+extends pug/layout/_base
+
+block content
+    section.expectation
+        h2 Ожидания от ШРИ
+        .gallery.items-4.autoplay
+            #item-1.control-operator
+            #item-2.control-operator
+            #item-3.control-operator
+            #item-4.control-operator
+            .item
+                h3 Развитие
+                p Думаю, что получу много новой информации и здорово освежу старые знания.
+            .item
+                h3 Актуальные знания
+                p Хочу узнать, как именно сейчас строится работа, исходя из чего используется тот или иной инструмент.
+            .item
+                h3 Командная работа
+                p Хочу попрактиковаться работать в команде, поскольку это очень важное умение, которое, к сожалению, в моём текущем опыте работы пока не использовалось.
+            .item
+                h3 Карьерные перспективы
+                p Яндекс предлагает стажировки, что замечательно. Но и без этого ШРИ будет хорошей стартовой площадкой для меня как фронтэндера.
+            .controls
+                a.control-button(href='#item-1') •
+                a.control-button(href='#item-2') •
+                a.control-button(href='#item-3') •
+                a.control-button(href='#item-4') •
+
+    section.works
+        h2 Мои работы
+        .works-item
+            h3.works-item__heading Школа йоги в Минске yogin.by
+            a(href="https://yogin.by") yogin.by
+            .gallery.items-3.autoplay.works-item__screenshots
+                #item-1-1.control-operator
+                #item-2-1.control-operator
+                #item-3-1.control-operator
+                figure.item
+                    img(src="#", alt="Screen1")
+                figure.item
+                    img(src="#", alt="Screen1")
+                figure.item
+                    img(src="#", alt="Screen1")
+                .controls
+                    a.control-button(href='#item-1-1') •
+                    a.control-button(href='#item-2-1') •
+                    a.control-button(href='#item-3-1') •
+        .works-item
+            h3.works-item__heading Школа английского языка eng.by
+            a(href="https://eng.by") eng.by
+            .gallery.items-3.autoplay.works-item__screenshots
+                #item-1-11.control-operator
+                #item-2-11.control-operator
+                #item-3-11.control-operator
+                figure.item
+                    img(src="#", alt="Screen1")
+                figure.item
+                    img(src="#", alt="Screen1")
+                figure.item
+                    img(src="#", alt="Screen1")
+                .controls
+                    a.control-button(href='#item-1-11') •
+                    a.control-button(href='#item-2-11') •
+                    a.control-button(href='#item-3-11') •
+        .works-item
+            h3.works-item__heading Медицинский центр ШайнЭст
+            a(href="https://www.shine-est.by") shine-est.by
+            .gallery.items-3.autoplay.works-item__screenshots
+                #item-1-2.control-operator
+                #item-2-2.control-operator
+                #item-3-2.control-operator
+                figure.item
+                    img(src="#", alt="Screen1")
+                figure.item
+                    img(src="#", alt="Screen1")
+                figure.item
+                    img(src="#", alt="Screen1")
+                .controls
+                    a.control-button(href='#item-1-2') •
+                    a.control-button(href='#item-2-2') •
+                    a.control-button(href='#item-3-2') •
+        .works-item
+            h3.works-item__heading Мобильное приложение Go2Fest
+            a(href="http://go2fest.today/") go2fest.today
+            .gallery.items-3.autoplay.works-item__screenshots
+                #item-1-3.control-operator
+                #item-2-3.control-operator
+                #item-3-3.control-operator
+                figure.item
+                    img(src="#", alt="Screen1")
+                figure.item
+                    img(src="#", alt="Screen1")
+                figure.item
+                    img(src="#", alt="Screen1")
+                .controls
+                    a.control-button(href='#item-1-3') •
+                    a.control-button(href='#item-2-3') •
+                    a.control-button(href='#item-3-3') •
+
+
+    section.contact
+        h2 Контактная информация
+        .row
+            .half
+                p Можете просто написать мне в любую из соцсетей. А можете прислать ТЗ на оценку.
+                p Ссылки на мои соцсети:
+                ul
+                    li
+                        a(href="#") Facebook
+                    li
+                        a(href="#") Вконтакте
+                    li
+                        a(href="#") Github
+                    li
+                        a(href="#") Twitter
+                    li
+                        a(href="#") LinkedIn
+
+            .half
+                form(method="post", class="contact-form")
+                    label(for="name") Имя
+                    input(type="txt", id="name", placeholder="Имя")
+                    label(for="email") Почтовый ящик
+                    input(type="email", id="email", placeholder="Почтовый ящик")
+                    label(for="msg") Сообщение
+                    textarea(id="msg", placeholder="Сообщение")
+                    input(type="file")
+                    button.btn Отправить
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

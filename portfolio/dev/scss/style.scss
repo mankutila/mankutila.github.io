@@ -1,0 +1,84 @@
+
+@import "../../node_modules/normalize.css/normalize";
+@import "helpers/variables";
+@import "base/grid";
+@import "helpers/mixins";
+@import "component/sprites";
+@import "component/buttons";
+@import "component/forms";
+
+:root {
+  font-size: 16px;
+  --font: Georgia, serif;
+  --accentFont: Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  height: 100%;
+  overflow-x: hidden;
+  font: rem(16) var(--font);
+  line-height:1.5;
+  color: #000;
+}
+h1, h2, h3 {
+  font-family: var(--accentFont);
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+.container {
+  width: 100%;
+  padding: 0 rem(20);
+}
+
+.header {
+  background-color: #082841;
+  color: #fff;
+  padding: rem(33) rem(15) rem(42);
+  text-align: center;
+  h1 {
+    font-size: rem(16);
+    span {
+      display: block;
+      font-size: rem(32);
+      margin: rem(15) 0 rem(20);
+    }
+  }
+}
+.header__photo {
+  @include size(rem(144));
+  margin: rem(20) auto;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+
+@import "base/responsive";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
