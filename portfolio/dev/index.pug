@@ -1,131 +1,167 @@
 extends pug/layout/_base
 
 block content
-    section.expectation
-        h2 Ожидания от ШРИ
-        .gallery.items-4.autoplay
-            #item-1.control-operator
-            #item-2.control-operator
-            #item-3.control-operator
-            #item-4.control-operator
-            .item
-                h3 Развитие
-                p Думаю, что получу много новой информации и здорово освежу старые знания.
-            .item
-                h3 Актуальные знания
-                p Хочу узнать, как именно сейчас строится работа, исходя из чего используется тот или иной инструмент.
-            .item
-                h3 Командная работа
-                p Хочу попрактиковаться работать в команде, поскольку это очень важное умение, которое, к сожалению, в моём текущем опыте работы пока не использовалось.
-            .item
-                h3 Карьерные перспективы
-                p Яндекс предлагает стажировки, что замечательно. Но и без этого ШРИ будет хорошей стартовой площадкой для меня как фронтэндера.
-            .controls
-                a.control-button(href='#item-1') •
-                a.control-button(href='#item-2') •
-                a.control-button(href='#item-3') •
-                a.control-button(href='#item-4') •
-
-    section.works
-        h2 Мои работы
-        .works-item
-            h3.works-item__heading Школа йоги в Минске yogin.by
-            a(href="https://yogin.by") yogin.by
-            .gallery.items-3.autoplay.works-item__screenshots
-                #item-1-1.control-operator
-                #item-2-1.control-operator
-                #item-3-1.control-operator
+    main.main
+        section.expectation.container
+            h2.section-heading Ожидания от ШРИ
+            .gallery.gallery--expectation.items-4.autoplay
+                #item-1.control-operator
+                #item-2.control-operator
+                #item-3.control-operator
+                #item-4.control-operator
                 figure.item
-                    img(src="#", alt="Screen1")
+                    h3 Развитие
+                    p Думаю, что получу много новой информации и&nbsp;здорово освежу старые знания.
                 figure.item
-                    img(src="#", alt="Screen1")
+                    h3 Актуальные знания
+                    p Хочу узнать, как именно сейчас строится работа, исходя из&nbsp;чего используется тот или иной инструмент.
                 figure.item
-                    img(src="#", alt="Screen1")
+                    h3 Командная работа
+                    p Хочу попрактиковаться работать в&nbsp;команде, поскольку это очень важное умение, которое, к&nbsp;сожалению, в&nbsp;моём текущем опыте работы пока не&nbsp;использовалось.
+                figure.item
+                    h3 Карьерные перспективы
+                    p Яндекс предлагает стажировки, что замечательно. Но&nbsp;и&nbsp;без этого ШРИ будет хорошей стартовой площадкой для меня как фронтэндера.
                 .controls
-                    a.control-button(href='#item-1-1') •
-                    a.control-button(href='#item-2-1') •
-                    a.control-button(href='#item-3-1') •
-        .works-item
-            h3.works-item__heading Школа английского языка eng.by
-            a(href="https://eng.by") eng.by
-            .gallery.items-3.autoplay.works-item__screenshots
-                #item-1-11.control-operator
-                #item-2-11.control-operator
-                #item-3-11.control-operator
-                figure.item
-                    img(src="#", alt="Screen1")
-                figure.item
-                    img(src="#", alt="Screen1")
-                figure.item
-                    img(src="#", alt="Screen1")
-                .controls
-                    a.control-button(href='#item-1-11') •
-                    a.control-button(href='#item-2-11') •
-                    a.control-button(href='#item-3-11') •
-        .works-item
-            h3.works-item__heading Медицинский центр ШайнЭст
-            a(href="https://www.shine-est.by") shine-est.by
-            .gallery.items-3.autoplay.works-item__screenshots
-                #item-1-2.control-operator
-                #item-2-2.control-operator
-                #item-3-2.control-operator
-                figure.item
-                    img(src="#", alt="Screen1")
-                figure.item
-                    img(src="#", alt="Screen1")
-                figure.item
-                    img(src="#", alt="Screen1")
-                .controls
-                    a.control-button(href='#item-1-2') •
-                    a.control-button(href='#item-2-2') •
-                    a.control-button(href='#item-3-2') •
-        .works-item
-            h3.works-item__heading Мобильное приложение Go2Fest
-            a(href="http://go2fest.today/") go2fest.today
-            .gallery.items-3.autoplay.works-item__screenshots
-                #item-1-3.control-operator
-                #item-2-3.control-operator
-                #item-3-3.control-operator
-                figure.item
-                    img(src="#", alt="Screen1")
-                figure.item
-                    img(src="#", alt="Screen1")
-                figure.item
-                    img(src="#", alt="Screen1")
-                .controls
-                    a.control-button(href='#item-1-3') •
-                    a.control-button(href='#item-2-3') •
-                    a.control-button(href='#item-3-3') •
+                    a.control-button(href='#item-1') •
+                    a.control-button(href='#item-2') •
+                    a.control-button(href='#item-3') •
+                    a.control-button(href='#item-4') •
+
+        section.projects.container
+            h2.section-heading Мои работы
+            .project
+                .project__title
+                    h3.project__heading Школа йоги в Минске yogin.by
+                    a.project__link(href="https://yogin.by") yogin.by
+                .project__desc <b>В&nbsp;чём заключалась работа?</b> Адаптивная вёрстка сайта школы йоги и&nbsp;интеграция её&nbsp;с&nbsp;CMS ModX. <b>Использованные инструменты: </b> Pug, Sass, jQuery, Gulp, Sketch (Zeplin) и&nbsp;т.д.
+                .gallery.items-3.autoplay.project__screenshots
+                    #item-1-1.control-operator
+                    #item-2-1.control-operator
+                    #item-3-1.control-operator
+                    figure.item
+                        img(src="images/screenshots/1-1sm.jpg", srcset="images/screenshots/1-1.jpg 1024w", alt="yogin.by screenshot 1")
+                    figure.item
+                        img(src="images/screenshots/1-2sm.jpg", srcset="images/screenshots/1-2.jpg 1024w", alt="yogin.by screenshot 2")
+                    figure.item
+                        img(src="images/screenshots/1-3sm.jpg", srcset="images/screenshots/1-3.jpg 1024w", alt="yogin.by screenshot 3")
+                    .controls
+                        a.control-button(href='#item-1-1') •
+                        a.control-button(href='#item-2-1') •
+                        a.control-button(href='#item-3-1') •
+            .project
+                .project__title
+                    h3.project__heading Школа английского языка eng.by
+                    a.project__link(href="https://eng.by") eng.by
+                .project__desc <b>В&nbsp;чём заключалась работа?</b> Вёрстка десктопной версии сайта школы английского языка и&nbsp;интеграция её&nbsp;в&nbsp;Django темплейты. <b>Использованные инструменты: </b> Pug, Sass, jQuery, Gulp, Adobe Photoshop и&nbsp;т.д.
+                .gallery.items-3.autoplay.project__screenshots
+                    #item-1-11.control-operator
+                    #item-2-11.control-operator
+                    #item-3-11.control-operator
+                    figure.item
+                        img(src="images/screenshots/2-1sm.jpg", srcset="images/screenshots/2-1.jpg 1024w", alt="eng.by screenshot 1")
+                    figure.item
+                        img(src="images/screenshots/2-2sm.jpg", srcset="images/screenshots/2-2.jpg 1024w", alt="eng.by screenshot 2")
+                    figure.item
+                        img(src="images/screenshots/2-3sm.jpg", srcset="images/screenshots/2-3.jpg 1024w", alt="eng.by screenshot 3")
+                    .controls
+                        a.control-button(href='#item-1-11') •
+                        a.control-button(href='#item-2-11') •
+                        a.control-button(href='#item-3-11') •
+            .project
+                .project__title
+                    h3.project__heading Медицинский центр ШайнЭст
+                    a.project__link(href="https://www.shine-est.by") shine-est.by
+                .project__desc <b>В&nbsp;чём заключалась работа?</b> Вёрстка десктопной версии сайта медицинского центра и&nbsp;интеграция её&nbsp;с&nbsp;CMS Wordpress. <b>Использованные инструменты: </b> Pug, Sass, jQuery, Gulp, Adobe Photoshop и&nbsp;т.д. Впервые использовала Grid Layout в&nbsp;продакшене.
+                .gallery.items-3.autoplay.project__screenshots
+                    #item-1-2.control-operator
+                    #item-2-2.control-operator
+                    #item-3-2.control-operator
+                    figure.item
+                        img(src="images/screenshots/3-1sm.jpg", srcset="images/screenshots/3-1.jpg 1024w", alt="shine-est.by screenshot 1")
+                    figure.item
+                        img(src="images/screenshots/3-2sm.jpg", srcset="images/screenshots/3-2.jpg 1024w", alt="shine-est.by screenshot 2")
+                    figure.item
+                        img(src="images/screenshots/3-3sm.jpg", srcset="images/screenshots/3-3.jpg 1024w", alt="shine-est.by screenshot 3")
+                    .controls
+                        a.control-button(href='#item-1-2') •
+                        a.control-button(href='#item-2-2') •
+                        a.control-button(href='#item-3-2') •
+            .project
+                .project__title
+                    h3.project__heading Мобильное приложение Go2Fest
+                    a.project__link(href="http://go2fest.today/") go2fest.today
+                .project__desc <b>В&nbsp;чём заключалась работа?</b> Адаптивная вёрстка landing page для мобильного приложения. <b>Использованные инструменты: </b> Pug, Sass, Gulp, Adobe Photoshop и&nbsp;т.д.
+                .gallery.items-2.autoplay.project__screenshots
+                    #item-1-3.control-operator
+                    #item-2-3.control-operator
+                    figure.item
+                        img(src="images/screenshots/4-1sm.jpg", srcset="images/screenshots/4-1.jpg 1024w", alt="go2fest.today screenshot 1")
+                    figure.item
+                        img(src="images/screenshots/4-2sm.jpg", srcset="images/screenshots/4-2.jpg 1024w", alt="go2fest.today screenshot 2")
+                    .controls
+                        a.control-button(href='#item-1-3') •
+                        a.control-button(href='#item-2-3') •
+            .project
+                .project__title
+                    h3.project__heading Мобильное приложение Argo
+                    a.project__link(href="http://argoreality.io/") argoreality.io
+                .project__desc <b>В&nbsp;чём заключалась работа?</b> Адаптивная вёрстка landing page для мобильного приложения. <b>Использованные инструменты: </b> Pug, Sass, Gulp, Adobe Photoshop и&nbsp;т.д. Особенность&nbsp;— «дополненная реальность» в&nbsp;экране смартфона в&nbsp;правом нижнем углу. Активно использовались CSS анимации.
+                .gallery.items-3.autoplay.project__screenshots
+                    #item-1-5.control-operator
+                    #item-2-5.control-operator
+                    #item-3-5.control-operator
+                    figure.item
+                        img(src="images/screenshots/5-1sm.jpg", srcset="images/screenshots/5-1.jpg 1024w", alt="argoreality.io screenshot 1")
+                    figure.item
+                        img(src="images/screenshots/5-2sm.jpg", srcset="images/screenshots/5-2.jpg 1024w", alt="argoreality.io screenshot 2")
+                    figure.item
+                        img(src="images/screenshots/5-3sm.jpg", srcset="images/screenshots/5-3.jpg 1024w", alt="argoreality.io screenshot 3")
+                    .controls
+                        a.control-button(href='#item-1-5') •
+                        a.control-button(href='#item-2-5') •
+                        a.control-button(href='#item-3-5') •
 
 
-    section.contact
-        h2 Контактная информация
-        .row
-            .half
-                p Можете просто написать мне в любую из соцсетей. А можете прислать ТЗ на оценку.
-                p Ссылки на мои соцсети:
-                ul
-                    li
-                        a(href="#") Facebook
-                    li
-                        a(href="#") Вконтакте
-                    li
-                        a(href="#") Github
-                    li
-                        a(href="#") Twitter
-                    li
-                        a(href="#") LinkedIn
+        section.contact
+            .container
+                h2.section-heading Контактная информация
+                .row
+                    ul.socials
+                        p Ссылки на мои соцсети:
 
-            .half
-                form(method="post", class="contact-form")
-                    label(for="name") Имя
-                    input(type="txt", id="name", placeholder="Имя")
-                    label(for="email") Почтовый ящик
-                    input(type="email", id="email", placeholder="Почтовый ящик")
-                    label(for="msg") Сообщение
-                    textarea(id="msg", placeholder="Сообщение")
-                    input(type="file")
-                    button.btn Отправить
+                        li
+                            +icon('twi')
+                            a.soc(href="https://twitter.com/mankutila", target="_blank", rel="noopener") Twitter
+                        li
+                            +icon('gh')
+                            a.soc(href="https://github.com/mankutila", target="_blank", rel="noopener") Github
+
+                        li
+                            +icon('linked')
+                            a.soc(href="https://www.linkedin.com/in/maryia-piaredryi-a4487180/", target="_blank", rel="noopener") LinkedIn
+                        li
+                            +icon('fb')
+                            a.soc(href="https://www.facebook.com/mankutila", target="_blank", rel="noopener") Facebook
+                        li
+                            +icon('vk')
+                            a.soc(href="https://vk.com/mankutila", target="_blank", rel="noopener") Вконтакте
+
+                    .contact__left
+                        p Можете просто написать мне в&nbsp;любую из&nbsp;соцсетей. А&nbsp;можете написать через форму ниже и&nbsp;прислать&nbsp;ТЗ на&nbsp;оценку.
+                    .contact__right
+                        form.contact-form(method="post", class="contact-form")
+                            label.visually-hidden(for="name") Имя
+                            input(type="text", id="name", autocomplete="name", placeholder="Имя")
+                            label.visually-hidden(for="email") Почтовый ящик
+                            input(type="email", id="email", autocomplete="email", placeholder="Почтовый ящик")
+                            label.visually-hidden(for="msg") Сообщение
+                            textarea(id="msg", placeholder="Сообщение")
+
+                            input(type="file", id="file")
+                            label(for="file")
+                                +icon('file')
+                                | Прикрепить ТЗ
+                            button.btn Отправить
 
 
 

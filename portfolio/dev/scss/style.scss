@@ -1,19 +1,21 @@
-
-@import "../../node_modules/normalize.css/normalize";
-@import "helpers/variables";
-@import "base/grid";
-@import "helpers/mixins";
-@import "component/sprites";
-@import "component/buttons";
-@import "component/forms";
-
 :root {
   font-size: 16px;
   --font: Georgia, serif;
   --accentFont: Helvetica, Arial, "Lucida Grande", sans-serif;
+  --accentColor: #DD3E18;
 }
+@import "../../node_modules/normalize.css/normalize";
+@import "helpers/variables";
+@import "base/grid";
+@import "helpers/mixins";
+@import "gallery.min";
+@import "gallery.theme";
+
 * {
   box-sizing: border-box;
+  &:focus {
+    outline: 1px solid var(--accentColor)
+  }
 }
 body {
   background-color: #fff;
@@ -21,7 +23,7 @@ body {
   overflow-x: hidden;
   font: rem(16) var(--font);
   line-height:1.5;
-  color: #000;
+  color: #333;
 }
 h1, h2, h3 {
   font-family: var(--accentFont);
@@ -30,9 +32,20 @@ h1, h2, h3 {
 p {
   margin: 0;
 }
+a {
+  color: var(--accentColor);
+  text-decoration: none;
+}
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
 .container {
   width: 100%;
-  padding: 0 rem(20);
+  padding: 0 rem(16);
 }
 
 .header {
@@ -57,6 +70,140 @@ p {
   img {
     width: 100%;
   }
+}
+.main {
+  padding: rem(50) 0 0;
+}
+.section-heading {
+  margin: rem(40) 0 rem(13);
+  font-size: rem(32);
+  line-height: 40/32 * 1;
+}
+.gallery {
+  margin-bottom:rem(50);
+  box-shadow: 0 6px 20px 7px rgba(0, 0, 0, 0.08);
+  .item {
+    margin:0;
+    height: 100%;
+  }
+}
+.gallery--expectation {
+  height: rem(304);
+  .item {
+    border-radius: rem(4);
+    background: linear-gradient(to bottom, #E6F0F0, #E9F0E6);
+    padding: rem(25);
+    text-align: left;
+    h3 {
+      font-size: rem(24);
+      line-height: 29/24 * 1;
+      margin-bottom: rem(24);
+    }
+  }
+}
+.gallery .control-button {
+  font-size: 2em;
+  margin: 0 rem(12);
+}
+
+.gallery .controls {
+  bottom: rem(-40);
+}
+.expectation {
+  margin-bottom: rem(90);
+}
+.project {
+  margin: rem(40) 0 rem(90);
+}
+.project__screenshots {
+  img {
+    width: 100%;
+  }
+}
+.project__heading {
+  font-size: rem(24);
+  line-height: 29/24 * 1;
+  margin-bottom: rem(8);
+}
+.project__link {
+  display: inline-block;
+  margin-bottom: rem(16);
+}
+.project__desc {
+  margin-bottom: rem(15);
+}
+.contact {
+  background: linear-gradient(to bottom, #E6F0F0, #E9F0E6);
+  padding: rem(3) 0 rem(43) 0;
+}
+.contact__left, .contact__right {
+  width: 100%;
+}
+.socials {
+  padding: 0;
+  margin: 0 0 rem(15);
+  list-style: none;
+  li {
+    margin: rem(8) 0;
+  }
+}
+.socials {
+  .icon {
+    @include size(rem(20));
+    margin: 0 rem(10) rem(-3) 0;
+  }
+}
+
+.soc {
+  line-height: 1;
+}
+.contact-form {
+  margin: rem(30) 0;
+  input[type="text"], input[type="email"], textarea {
+    border: none;
+    background-color: #fff;
+    border-radius: rem(4);
+    width: 100%;
+    margin-bottom: rem(24);
+    padding: rem(15);
+    @include placeholder(#000);
+  }
+  textarea {
+    resize: none;
+    height: rem(192);
+    margin-bottom: 0;
+  }
+  input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    & + label {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--accentColor);
+      font-family: var(--accentFont);
+    }
+
+  }
+}
+.icon--file {
+  fill: var(--accentColor);
+  @include size(rem(16), rem(20));
+  margin: 0 rem(11) rem(-3) 0;
+}
+.btn {
+  @include resetBtn();
+  display: block;
+  width: 100%;
+  background-color: var(--accentColor);
+  color: #fff;
+  font: 700 rem(16) var(--accentFont);
+  padding: rem(15);
+  border-radius: rem(4);
+  margin: rem(31) auto 0;
 }
 
 @import "base/responsive";
